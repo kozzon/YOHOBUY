@@ -1,0 +1,298 @@
+@charset "UTF-8";
+html,
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: '微软雅黑';
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+b,
+strong {
+  font-weight: normal;
+}
+
+i,
+em,
+b,
+strong {
+  font-style: normal;
+}
+
+a,
+u {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+input,
+fieldset {
+  outline: none;
+  border: 0;
+}
+
+.clear_fix:after {
+  content: '.';
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  visibility: hidden;
+}
+
+.clear_fix {
+  zoom: 1;
+}
+
+header {
+  font-size: 10px;
+  width: 100%;
+  height: 32px;
+  background-color: #f4f4f4;
+}
+header .wrapper {
+  width: 1150px;
+  display: flex;
+  margin: 0 auto;
+  line-height: 32px;
+  justify-content: space-between;
+}
+header .wrapper .nav-h-l {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+header .wrapper .nav-h-l a {
+  color: #000;
+}
+header .wrapper .nav-h-l .nav-h-l-r a {
+  color: red;
+}
+header .wrapper .nav-h-r {
+  width: 65%;
+}
+
+.nav-h-l .nav-h-l-l {
+  width: 30%;
+  text-align: center;
+}
+.nav-h-l .nav-h-l-l:hover {
+  background-color: #dcdcdc;
+}
+.nav-h-l .nav-h-l-l:hover .nav-h-l-sec {
+  display: block;
+}
+.nav-h-l .nav-h-l-r {
+  width: 70%;
+  text-indent: 15px;
+  color: red;
+  line-height: 32px;
+}
+
+.nav-h-l {
+  position: relative;
+}
+.nav-h-l .nav-h-l-sec {
+  position: absolute;
+  top: 32px;
+  width: 180px;
+  height: 180px;
+  background-color: #f4f4f4;
+  display: none;
+}
+.nav-h-l .nav-h-l-sec ul {
+  margin-top: 15px;
+}
+.nav-h-l .nav-h-l-sec ul li {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+.nav-h-l .nav-h-l-sec ul li a {
+  color: #9196a0;
+  margin: 0 0 0 15px;
+  font-size: 14px;
+}
+.nav-h-l .nav-h-l-sec ul li:hover a {
+  color: #000;
+}
+
+.nav-h-l-sec a i {
+  display: none;
+}
+.nav-h-l-sec a:hover span {
+  display: none;
+}
+.nav-h-l-sec a:hover i {
+  display: inline-block;
+}
+
+.nav-h-r ul {
+  display: flex;
+  color: #8e8e8e;
+}
+.nav-h-r ul li {
+  text-align: center;
+  padding: 0 10px;
+}
+.nav-h-r ul li:nth-child(1) a {
+  color: #8e8e8e;
+}
+.nav-h-r ul b {
+  color: #000;
+}
+.nav-h-r ul span {
+  color: #8e8e8e;
+}
+.nav-h-r ul a {
+  color: #8e8e8e;
+}
+.nav-h-r ul .icon-arrow {
+  font-size: 10px;
+}
+.nav-h-r ul .wx-g {
+  color: #86bf4a;
+}
+.nav-h-r ul .wx-g a {
+  color: #86bf4a;
+}
+.nav-h-r ul .phone-r {
+  color: #d71d32;
+}
+.nav-h-r ul .phone-r a {
+  color: #d71d32;
+}
+.nav-h-r ul .myyh:hover {
+  background-color: #eaeceb;
+}
+.nav-h-r ul .custom-s {
+  position: relative;
+}
+.nav-h-r ul .custom-s:hover .custom-s-sec,
+.nav-h-r ul .custom-s:hover .custom-s-sec-s {
+  display: block;
+}
+.nav-h-r ul .custom-s-sec {
+  position: absolute;
+  top: 32px;
+  left: 0px;
+  width: 100%;
+  height: 32px;
+  border-top: 1px solid gray;
+  background-color: #eaeceb;
+  display: none;
+}
+.nav-h-r ul .custom-s-sec-s {
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  width: 100%;
+  height: 32px;
+  border-top: 1px solid gray;
+  background-color: #eaeceb;
+  display: none;
+}
+.nav-h-r ul .wx-nav {
+  position: relative;
+}
+.nav-h-r ul .wx-nav:hover {
+  background-color: #eaeceb;
+}
+.nav-h-r ul .wx-nav:hover div {
+  display: block;
+}
+.nav-h-r ul .wx-nav div {
+  display: none;
+  width: 146px;
+  position: absolute;
+  top: 32px;
+  left: -28px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+.nav-h-r ul .wx-nav div img {
+  margin: 20px auto 0;
+}
+.nav-h-r ul .wx-nav div p {
+  height: 20px;
+  line-height: 20px;
+  color: #000;
+}
+.nav-h-r ul .wx-nav div p:nth-child(3) {
+  padding-bottom: 10px;
+}
+.nav-h-r ul .app-nav {
+  position: relative;
+}
+.nav-h-r ul .app-nav:hover {
+  background-color: #eaeceb;
+}
+.nav-h-r ul .app-nav:hover div {
+  display: block;
+}
+.nav-h-r ul .app-nav div {
+  display: none;
+  width: 146px;
+  position: absolute;
+  top: 32px;
+  left: -28px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+.nav-h-r ul .app-nav div img {
+  margin: 20px auto 0;
+}
+.nav-h-r ul .app-nav div p {
+  height: 20px;
+  line-height: 20px;
+  color: #000;
+}
+.nav-h-r ul .app-nav div p:nth-child(3) {
+  color: red;
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
