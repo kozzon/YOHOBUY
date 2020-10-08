@@ -95,7 +95,6 @@ fieldset {
 header {
   font-size: 10px;
   width: 100%;
-  height: 32px;
   background-color: #f4f4f4;
 }
 header .wrapper {
@@ -321,24 +320,25 @@ header .wrapper .nav-h-r {
   position: absolute;
   right: 90px;
   top: 40px;
-  height: 28px;
+  height: 29px;
   width: 320px;
+  border: 1px solid;
 }
 .t-search .wrapper .search-2016 input {
   width: 240px;
-  height: 28px;
-  border: 1px solid;
+  height: 26px;
+  border: 0;
   box-sizing: border-box;
   padding-left: 10px;
 }
 .t-search .wrapper .search-2016 a {
   position: absolute;
-  right: 0;
-  top: 2px;
+  right: 0px;
+  top: -1px;
   border: none;
   display: inline-block;
   width: 80px;
-  height: 28px;
+  height: 31px;
   color: white;
   background-color: black;
   text-align: center;
@@ -440,13 +440,14 @@ header .wrapper .nav-h-r {
 .bags .wrapper-c,
 .ornament .wrapper-c {
   position: absolute;
+  z-index: 999;
   left: 0;
   width: 1150px;
   margin: 0 auto;
   height: 410px;
   display: flex;
   justify-content: space-between;
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
   padding: 10px 0 0 0;
 }
 .clothes .wrapper-c a,
@@ -517,8 +518,194 @@ header .wrapper .nav-h-r {
 }
 
 .banner {
+  width: 1150px;
   height: 430px;
+  position: relative;
   margin-top: 10px;
+}
+.banner .active {
+  background: gray;
+}
+.banner img {
+  width: 1150px;
+  height: 430px;
+}
+.banner ul li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+}
+.banner ol {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 20px;
+}
+.banner ol li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ccc;
+  text-indent: -999em;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.banner #left,
+.banner #right {
+  display: inline-block;
+  background-color: #999;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  color: #fff;
+  font-size: 60px;
+  text-decoration: none;
+}
+.banner #left {
+  left: 20px;
+}
+.banner #right {
+  right: 20px;
+}
+
+.floor-title {
+  width: 298px;
+  height: 31px;
+  line-height: 31px;
+  border: 1px solid;
+  font-size: 16px;
+  text-align: center;
+  margin: 80px auto 30px auto;
+}
+
+.list-f li {
+  display: inline-block;
+  float: left;
+  margin: 8px 8px 0 0;
+}
+.list-f li img {
+  width: 185px;
+  height: 248px;
+}
+.list-f li:hover {
+  opacity: .8;
+}
+.list-f .pic-1 img,
+.list-f .pic-9 img {
+  width: 378px;
+}
+.list-f .pic-4,
+.list-f .pic-9 {
+  margin-right: 0;
+}
+
+.list-stap {
+  width: 1150px;
+  height: 175px;
+  position: relative;
+  margin-top: 10px;
+}
+.list-stap img {
+  width: 378px;
+  height: 175px;
+  display: inline-block;
+}
+.list-stap .mar-r {
+  margin-right: 2px;
+}
+.list-stap ul li {
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+}
+.list-stap #sleft,
+.list-stap #sright {
+  display: inline-block;
+  background-color: #999;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  color: #fff;
+  font-size: 60px;
+  text-decoration: none;
+}
+.list-stap #sleft {
+  left: 20px;
+}
+.list-stap #sright {
+  right: 20px;
+}
+
+.list-s {
+  position: relative;
+}
+.list-s li {
+  display: inline-block;
+  float: left;
+  margin: 8px 8px 0 0;
+}
+.list-s li img {
+  width: 185px;
+  height: 86px;
+}
+.list-s li:hover {
+  opacity: .8;
+}
+.list-s .f-tap {
+  display: inline-block;
+  width: 185px;
+  height: 86px;
+  position: absolute;
+  right: -8px;
+  top: 0px;
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.10.6/img/index/logo-brand-line.png?172fa78857b) no-repeat 50%;
+}
+.list-s .f-tap a {
+  color: #000;
+  font-size: 32px;
+  font-weight: 900;
+}
+.list-s .f-tap .a-l {
+  position: absolute;
+  left: 40px;
+  top: 15px;
+}
+.list-s .f-tap .a-r {
+  position: absolute;
+  right: 40px;
+  bottom: 15px;
+}
+.list-s .last-more {
+  width: 185px;
+  height: 86px;
+  text-align: center;
+  line-height: 86px;
+  position: absolute;
+  right: -8px;
+  top: 188px;
+}
+.list-s .last-more a {
+  color: black;
+}
+.list-s .last-more a:hover {
+  text-decoration: underline;
+}
+.list-s .pic-10 {
+  margin-right: 0;
 }
 
 footer {
