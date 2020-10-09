@@ -35,10 +35,10 @@
 }
 
 .list-stap {
-    width: 1150px;
     height: 175px;
     position: relative;
     margin-top: 10px;
+    overflow: hidden;
     img {
         width: 378px;
         height: 175px;
@@ -48,14 +48,12 @@
         margin-right: 2px;
     }
     ul {
+        position: absolute;
+        left: 0px;
+        top: 0px;
         li {
-            width: 100%;
-            height: 100%;
+            width: 1150px;
             float: left;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            opacity: 0;
         }
     }
     #sleft,
@@ -72,6 +70,7 @@
         color: #fff;
         font-size: 60px;
         text-decoration: none;
+        display: none;
     }
     #sleft {
         left: 20px;
@@ -137,4 +136,90 @@
     .pic-10 {
         margin-right: 0;
     }
+}
+
+.list-t {
+    position: relative;
+    li {
+        display: inline-block;
+        float: left;
+        margin: 8px 8px 0 0;
+        img {
+            width: 185px;
+            height: 248px;
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .pic-0 {
+        img {
+            height: 152px;
+        }
+    }
+    .pic-1 {
+        position: absolute;
+        left: 0;
+        top: 160px;
+        img {
+            height: 86px;
+        }
+    }
+    .pic-2,
+    .pic-6 {
+        img {
+            width: 378px;
+        }
+    }
+    .pic-5,
+    .pic-9 {
+        margin-right: 0;
+    }
+    .pic-6 {
+        margin-left: 193px;
+    }
+    .list-t-nav {
+        position: absolute;
+        left: 0;
+        top: 256px;
+        width: 185px;
+        height: 248px;
+        background-color: #f8f8f8;
+        a {
+            float: left;
+            display: inline-block;
+            width: 50%;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            color: #000;
+            font-size: 14px;
+        }
+    }
+}
+
+.list-fo {
+    position: relative;
+    li {
+        display: inline-block;
+        float: left;
+        margin: 8px 10px 0 0;
+        img {
+            width: 222px;
+            height: 298px;
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .pic-4 {
+        margin-right: 0;
+    }
+}
+
+.floor-title-more {
+    font-size: 14px;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
 }

@@ -23,7 +23,7 @@ require(['config'], function() {
                         // _this.leftarrow.hide();
                         // _this.rightarrow.hide();
                         //     //继续轮播
-                        this.timer = window.setInterval(function() {
+                        _this.timer = window.setInterval(function() {
                             _this.rightarrowclick();
                         }, 5000);
                     });

@@ -95,6 +95,9 @@ fieldset {
 header {
   font-size: 10px;
   width: 100%;
+}
+header .top-nav {
+  width: 100%;
   background-color: #f4f4f4;
 }
 header .wrapper {
@@ -357,9 +360,9 @@ header .wrapper .nav-h-r {
   display: block;
   position: absolute;
   z-index: 900;
-  right: 0;
+  right: -20px;
   top: 31px;
-  width: 360px;
+  width: 380px;
   height: 480px;
   background-color: #f8f8f8;
   display: none;
@@ -379,12 +382,10 @@ header .wrapper .nav-h-r {
 }
 
 .nav-t {
+  position: relative;
   height: 40px;
   width: 100%;
   background-color: #3a3a3a;
-}
-.nav-t .wrapper {
-  position: relative;
 }
 .nav-t ul {
   width: 950px;
@@ -426,7 +427,12 @@ header .wrapper .nav-h-r {
 .bags .clothes-content,
 .ornament .clothes-content {
   margin-top: 1px;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  width: 100%;
   display: none;
+  background-color: #f8f8f8;
 }
 .clothes hr,
 .shoes hr,
@@ -439,15 +445,12 @@ header .wrapper .nav-h-r {
 .shoes .wrapper-c,
 .bags .wrapper-c,
 .ornament .wrapper-c {
-  position: absolute;
-  z-index: 999;
-  left: 0;
   width: 1150px;
   margin: 0 auto;
   height: 410px;
   display: flex;
   justify-content: space-between;
-  background-color: #f4f4f4;
+  background-color: #f8f8f8;
   padding: 10px 0 0 0;
 }
 .clothes .wrapper-c a,
@@ -606,10 +609,10 @@ header .wrapper .nav-h-r {
 }
 
 .list-stap {
-  width: 1150px;
   height: 175px;
   position: relative;
   margin-top: 10px;
+  overflow: hidden;
 }
 .list-stap img {
   width: 378px;
@@ -619,14 +622,14 @@ header .wrapper .nav-h-r {
 .list-stap .mar-r {
   margin-right: 2px;
 }
-.list-stap ul li {
-  width: 100%;
-  height: 100%;
-  float: left;
+.list-stap ul {
   position: absolute;
   left: 0px;
   top: 0px;
-  opacity: 0;
+}
+.list-stap ul li {
+  width: 1150px;
+  float: left;
 }
 .list-stap #sleft,
 .list-stap #sright {
@@ -642,6 +645,7 @@ header .wrapper .nav-h-r {
   color: #fff;
   font-size: 60px;
   text-decoration: none;
+  display: none;
 }
 .list-stap #sleft {
   left: 20px;
@@ -706,6 +710,88 @@ header .wrapper .nav-h-r {
 }
 .list-s .pic-10 {
   margin-right: 0;
+}
+
+.list-t {
+  position: relative;
+}
+.list-t li {
+  display: inline-block;
+  float: left;
+  margin: 8px 8px 0 0;
+}
+.list-t li img {
+  width: 185px;
+  height: 248px;
+}
+.list-t li:hover {
+  opacity: .8;
+}
+.list-t .pic-0 img {
+  height: 152px;
+}
+.list-t .pic-1 {
+  position: absolute;
+  left: 0;
+  top: 160px;
+}
+.list-t .pic-1 img {
+  height: 86px;
+}
+.list-t .pic-2 img,
+.list-t .pic-6 img {
+  width: 378px;
+}
+.list-t .pic-5,
+.list-t .pic-9 {
+  margin-right: 0;
+}
+.list-t .pic-6 {
+  margin-left: 193px;
+}
+.list-t .list-t-nav {
+  position: absolute;
+  left: 0;
+  top: 256px;
+  width: 185px;
+  height: 248px;
+  background-color: #f8f8f8;
+}
+.list-t .list-t-nav a {
+  float: left;
+  display: inline-block;
+  width: 50%;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+}
+
+.list-fo {
+  position: relative;
+}
+.list-fo li {
+  display: inline-block;
+  float: left;
+  margin: 8px 10px 0 0;
+}
+.list-fo li img {
+  width: 222px;
+  height: 298px;
+}
+.list-fo li:hover {
+  opacity: .8;
+}
+.list-fo .pic-4 {
+  margin-right: 0;
+}
+
+.floor-title-more {
+  font-size: 14px;
+  width: 120px;
+  background-color: #000;
+  color: #fff;
 }
 
 footer {
