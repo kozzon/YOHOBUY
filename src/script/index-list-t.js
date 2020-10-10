@@ -3,7 +3,7 @@ require(['config'], function() {
         ! function($) {
             const list = $('.list-t');
             $.ajax({ //获取远程接口的值
-                url: 'http://localhost/YOHO!BUY/php/indexlist-t.php',
+                url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-t.php',
                 dataType: 'json'
             }).done(function(data) {
                 // console.log(data);

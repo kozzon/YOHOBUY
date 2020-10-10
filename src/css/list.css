@@ -736,6 +736,7 @@ main .top a {
   margin-top: 50px;
 }
 .list li {
+  height: 417px;
   display: inline-block;
   float: left;
   margin: 8px 8px 50px 0;
@@ -749,10 +750,9 @@ main .top a {
   display: block;
   color: #000;
   margin-top: 16px;
-  height: 18px;
   line-height: 18px;
 }
-.list div {
+.list p {
   font-size: 12px;
   color: #666;
 }
@@ -883,6 +883,129 @@ footer {
 }
 .footer-friend a {
   color: #666;
+}
+
+.right-floating {
+  position: fixed;
+  width: 60px;
+  bottom: 20px;
+  z-index: 4;
+  left: 100%;
+  right: 20px;
+  margin-left: auto;
+  display: none;
+}
+.right-floating .code-box {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background: #000;
+  opacity: .5;
+  cursor: pointer;
+}
+.right-floating .code-box .code-img {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.scss.png?t=1594090251211);
+  background-position: -71px 0;
+  background-size: 123px 122px;
+  margin-top: 16px;
+}
+.right-floating .returntop {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  background: #000;
+  opacity: .5;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.right-floating .returntop .iconfont {
+  font-size: 30px;
+}
+.right-floating .active {
+  opacity: 1;
+}
+
+.code-box-content {
+  position: absolute;
+  bottom: -10px;
+  left: -300px;
+  width: 290px;
+  height: 180px;
+  padding: 0 6px;
+  z-index: 1000;
+  background-color: transparent;
+  text-align: center;
+  display: none;
+}
+.code-box-content .content {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+}
+.code-box-content .content-left,
+.code-box-content .content-right {
+  width: 110px;
+  display: inline-block;
+  background-color: #f4f4f4;
+}
+.code-box-content .content-right {
+  margin-top: 0;
+}
+.code-box-content img {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  margin-top: 20px;
+}
+.code-box-content p,
+.code-box-content a {
+  line-height: 20px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
+.code-box-content a {
+  color: red;
+}
+
+.codefixed {
+  position: fixed;
+  top: 260px;
+  right: 20px;
+  width: 117px;
+  padding-top: 20px;
+  border: none;
+  z-index: 9999;
+}
+.codefixed i {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.codefixed img {
+  display: inline-block;
+  width: 116px;
+  height: 116px;
+}
+.codefixed span {
+  display: block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 12px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=list.css.map */

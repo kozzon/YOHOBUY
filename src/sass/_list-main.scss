@@ -163,6 +163,7 @@ main {
     float: right;
     margin-top: 50px;
     li {
+        height: 417px;
         display: inline-block;
         float: left;
         margin: 8px 8px 50px 0;
@@ -176,10 +177,9 @@ main {
         display: block;
         color: #000;
         margin-top: 16px;
-        height: 18px;
         line-height: 18px;
     }
-    div {
+    p {
         font-size: 12px;
         color: #666;
     }

@@ -3,7 +3,7 @@ require(['config'], function() {
         ! function($) {
             const list = $('.list');
             $.ajax({ //获取远程接口的值
-                url: 'http://localhost/YOHO!BUY/php/list-goodlist.php',
+                url: 'http://192.168.11.9/YOHO!BUY/php/list-goodlist.php',
                 dataType: 'json'
             }).done(function(data) {
                 // console.log(data);
@@ -11,11 +11,15 @@ require(['config'], function() {
                 $.each(data, function(index, value) { //遍历数组和对象
                     strhtml += `
                         <li class="pic-${index}">
-                            <img class="lazy" data-original="${value.url}">
-                            <a href="">${value.title}</a>
-                            <div>${value.sub_title}</div>
-                            <span>￥${value.price}</span>
-                        </li>
+                            <a href="detail.html?sid=${value.sid}" class="clear_fix">
+                              <img class="lazy" data-original="${value.url}">
+                            </a>
+                            <div>
+                              <a href="">${value.title}</a>
+                              <p>${value.sub_title}</p>
+                              <span>￥${value.price}</span>
+                            </div>
+                        </li>                   
                     `;
                 });
                 list.html(strhtml); //追加数据
