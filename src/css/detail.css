@@ -610,7 +610,7 @@ main .top-nav a {
   margin-right: 60px;
   overflow: hidden;
 }
-.detail .goodsimgs span {
+.detail .goodsimgs li {
   display: block;
   width: 71px;
   height: 96px;
@@ -618,10 +618,8 @@ main .top-nav a {
   margin-bottom: 15px;
   border: 2px solid #fff;
 }
-.detail .goodsimgs span:hover {
-  border: 2px solid;
-}
-.detail .goodsimgs span img {
+.detail .goodsimgs li img {
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -746,9 +744,6 @@ main .top-nav a {
   background-size: 123px 122px;
   background-position: 0px -38px;
 }
-.detail .active {
-  border: 2px solid;
-}
 .detail .line {
   width: 100%;
   height: 2px;
@@ -782,6 +777,9 @@ main .top-nav a {
   box-sizing: border-box;
   font-size: 16px;
   cursor: pointer;
+}
+.detail .collect a {
+  color: #222;
 }
 .detail .support-service {
   letter-spacing: 2px;
@@ -836,12 +834,12 @@ main .top-nav a {
 }
 .scale .goodsbigimg .sf {
   opacity: 0.3;
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/product/move.png?173272e9025);
   background-color: orange;
   position: absolute;
   left: 0px;
   top: 0px;
   visibility: hidden;
-  cursor: move;
 }
 .scale .bf {
   position: absolute;

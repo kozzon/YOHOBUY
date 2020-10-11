@@ -4,7 +4,7 @@ require.config({
     baseUrl: 'https://cdn.bootcdn.net/ajax/libs/', //公共的路径，基路径，所有模块共有的路径
     paths: { //模块路径,路径引入后缀名必须忽略，配置里面已经存在后缀名（扩展名）。
         'jquery': 'jquery/1.12.4/jquery.min',
-        'jq_cookie': 'jquery-cookie/1.0/jquery.cookie',
+        'jq_cookie': 'jquery-cookie/1.0/jquery.cookie.min',
         'jq_lazyload': 'jquery.lazyload/1.8.3/jquery.lazyload.min'
     },
     shim: { //不支持AMD模块，支持AMD
