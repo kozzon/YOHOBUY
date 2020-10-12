@@ -8,7 +8,6 @@
     <meta name="description" content="【YOHO!BUY有货】，年轻人潮流购物中心，潮流商品购物网站。作为YOHO!旗下的购物平台，汇集了全球潮流时尚商品和国内流行商品，★全场品牌正品保证，支持货到付款★" />
     <meta name="Keywords" content="潮流,时尚潮流,潮流服饰,潮流购物网,潮流网站" />
 </head>
-<link rel="stylesheet" href="../font/iconfont.css">
 <link rel="stylesheet" href="css/detail.css">
 <script src="script/require.js" defer async="true" data-main="script/detail.js"></script>
 
@@ -351,30 +350,38 @@
                         </div>
                         <div class="chosedetail size">
                             <span class="title-left title-left-b">尺<i>码</i><i>:</i></span>
-                            <span class="size-button">S</span>
-                            <span class="size-button">M</span>
-                            <span class="size-button">L</span>
+                            <span class="sizebutton">S</span>
+                            <span class="sizebutton">M</span>
+                            <span class="sizebutton">L</span>
                         </div>
                         <div class="chosedetail number">
                             <span class="title-left title-left-b">数<i>量</i><i>:</i></span>
-                            <span class="numbercount">-</span>
-                            <input type="text" id="count" value="1">
-                            <span class="numbercount">+</span>
+                            <span class="numbercountminus">-</span>
+                            <span id="count"></span>
+                            <span class="numbercountadd">+</span>
                         </div>
                     </div>
                     <div class="line"></div>
-                    <span class="addtocart">
+                    <div class="none">
+                        <span class="addtocart">
                         <i class="iconfont">&#xe640;</i>
                         加入购物车
                     </span>
-                    <span class="collect">
+                        <span class="collect">
                         <i class="iconfont">&#xe643;</i>
-                        <a href="cart.html">收藏商品</a>
+                        <a href="javascript:;">收藏商品</a>
                     </span>
-                    <div class="support-service">服务说明：<i class="iconfont">&#xe654;</i> 品牌保障 <i class="iconfont">&#xe654;</i>支持7天退换货 <i>更多</i></div>
-                    <div class="codebox">
-                        <img src="https://img12.static.yhbimg.com/evidenceImages/2017/11/14/10/02c21ad1b55c13f8bcd9ae5b643c3c2374.png" alt="">
-                        <span>手机客户端扫一扫购买</span>
+                        <div class="support-service">服务说明：<i class="iconfont">&#xe654;</i> 品牌保障 <i class="iconfont">&#xe654;</i>支持7天退换货 <i>更多</i></div>
+                        <div class="codebox">
+                            <img src="https://img12.static.yhbimg.com/evidenceImages/2017/11/14/10/02c21ad1b55c13f8bcd9ae5b643c3c2374.png" alt="">
+                            <span>手机客户端扫一扫购买</span>
+                        </div>
+                    </div>
+                    <div class="show">
+                        <a href="cart.html" target="_blank">去购物车结算 ></a>
+                    </div>
+                    <div class="show">
+                        <a href="javascript:;">继续购物</a>
                     </div>
                 </div>
                 <div class="share">

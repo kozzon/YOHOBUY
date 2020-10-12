@@ -8,7 +8,6 @@
     <meta name="description" content="【YOHO!BUY有货】，年轻人潮流购物中心，潮流商品购物网站。作为YOHO!旗下的购物平台，汇集了全球潮流时尚商品和国内流行商品，★全场品牌正品保证，支持货到付款★" />
     <meta name="Keywords" content="潮流,时尚潮流,潮流服饰,潮流购物网,潮流网站" />
 </head>
-<link rel="stylesheet" href="../font/iconfont.css">
 <link rel="stylesheet" href="css/cart.css">
 <script src="script/require.js" defer async="true" data-main="script/cart.js"></script>
 
@@ -41,8 +40,7 @@
             </div>
             <div class="cart-title clear_fix">
                 <p class="allselect">
-                    全选
-                    <a href="javascript:;" class="iconfont">&#xe654;</a>
+                    <input type="checkbox" name="" id="" class="allsel1" value=""> 全选
                 </p>
                 <p class="goodsinfo">商品信息</p>
                 <p class="price">单价</p>
@@ -54,8 +52,7 @@
             </div>
             <div class="paylist">
                 <p class="allselect">
-                    全选
-                    <a href="javascript:;" class="iconfont">&#xe654;</a>
+                    <input type="checkbox" name="" id="" class="allsel2" value=""> 全选
                 </p>
                 <p class="goodsmove">
                     <a href="javascript:;">删除选中商品</a>
@@ -63,10 +60,12 @@
                     <a href="javascript:;">清空失效商品</a>
                 </p>
                 <p class="chosen">
-                    已选商品<i></i> 件
+                    已选商品
+                    <i class="amountnumber"></i> 件
                 </p>
                 <p class="countnumber">
-                    <span>应付金额（不含邮费）:<i class="amount"></i></span>
+                    <span>应付金额（不含邮费）:
+                    <i class="amount"></i></span>
                     <span>活动优惠：￥0.00</span>
                 </p>
                 <p class="pay">

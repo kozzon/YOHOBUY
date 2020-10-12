@@ -94,7 +94,7 @@ main {
             height: 34px;
         }
     }
-    .size-button {
+    .sizebutton {
         font-size: 12px;
         display: block;
         height: 24px;
@@ -107,20 +107,26 @@ main {
         cursor: pointer;
         width: 10px;
     }
+    .buttonchosen {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #000;
+    }
     .size {
         margin-top: 8px;
     }
     .number {
-        input {
+        #count {
             display: inline-block;
             width: 50px;
             height: 25px;
-            line-height: 27px;
+            line-height: 25px;
             text-align: center;
             border: 1px solid;
             margin: 0 5px;
         }
-        .numbercount {
+        .numbercountadd,
+        .numbercountminus {
             display: inline-block;
             width: 25px;
             height: 25px;
@@ -282,5 +288,27 @@ main {
         height: 1120px;
         position: absolute;
         z-index: 999;
+    }
+}
+
+.afteradd {
+    display: none;
+}
+
+.show {
+    display: none;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    width: 180px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d0021b;
+    box-sizing: border-box;
+    // float: left;
+    a {
+        color: #fff;
     }
 }

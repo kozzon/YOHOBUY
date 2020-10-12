@@ -87,6 +87,219 @@ fieldset {
   zoom: 1;
 }
 
+@font-face {
+  font-family: 'iconfont';
+  src: url("iconfont.eot");
+  src: url("iconfont.eot?#iefix") format("embedded-opentype"), url("../../font/iconfont.woff2") format("woff2"), url("../../font/iconfont.woff") format("woff"), url("../../font/iconfont.ttf") format("truetype"), url("../../font/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfont5:before {
+  content: "\e63a";
+}
+
+.icon-gouwuche:before {
+  content: "\e63f";
+}
+
+.icon-gouwuchetianjia:before {
+  content: "\e640";
+}
+
+.icon-cuowu:before {
+  content: "\e641";
+}
+
+.icon-erweima:before {
+  content: "\e642";
+}
+
+.icon-jushoucang:before {
+  content: "\e643";
+}
+
+.icon-lajixiang:before {
+  content: "\e645";
+}
+
+.icon-lianjie:before {
+  content: "\e646";
+}
+
+.icon-naozhong:before {
+  content: "\e648";
+}
+
+.icon-saoyisao:before {
+  content: "\e649";
+}
+
+.icon-shangfan:before {
+  content: "\e64a";
+}
+
+.icon-shezhi:before {
+  content: "\e64b";
+}
+
+.icon-shengyin:before {
+  content: "\e64c";
+}
+
+.icon-shijian:before {
+  content: "\e64d";
+}
+
+.icon-shouhuodizhi:before {
+  content: "\e64e";
+}
+
+.icon-shouye:before {
+  content: "\e64f";
+}
+
+.icon-shuaxin:before {
+  content: "\e650";
+}
+
+.icon-sousuo:before {
+  content: "\e651";
+}
+
+.icon-suo:before {
+  content: "\e652";
+}
+
+.icon-tishi:before {
+  content: "\e653";
+}
+
+.icon-wancheng:before {
+  content: "\e654";
+}
+
+.icon-wodedingdan:before {
+  content: "\e655";
+}
+
+.icon-wodefankui:before {
+  content: "\e656";
+}
+
+.icon-wodehongbao:before {
+  content: "\e657";
+}
+
+.icon-wodejuhuasuan:before {
+  content: "\e659";
+}
+
+.icon-wodeyouhuiquan:before {
+  content: "\e65a";
+}
+
+.icon-xiafan:before {
+  content: "\e65b";
+}
+
+.icon-xiala:before {
+  content: "\e65c";
+}
+
+.icon-xiangshangjiantou:before {
+  content: "\e65d";
+}
+
+.icon-xiangxiajiantou:before {
+  content: "\e65e";
+}
+
+.icon-xiangyoujiantou:before {
+  content: "\e65f";
+}
+
+.icon-xiangzuojiantou:before {
+  content: "\e660";
+}
+
+.icon-yanjing:before {
+  content: "\e661";
+}
+
+.icon-yijianfankui:before {
+  content: "\e662";
+}
+
+.icon-zhaoxiangji:before {
+  content: "\e663";
+}
+
+.icon-zhengque:before {
+  content: "\e664";
+}
+
+.icon-xiaoxizhongxin:before {
+  content: "\e665";
+}
+
+.icon-lingcunwei:before {
+  content: "\e666";
+}
+
+.icon-new:before {
+  content: "\e667";
+}
+
+.icon-ju:before {
+  content: "\e668";
+}
+
+.icon-suan:before {
+  content: "\e669";
+}
+
+.icon-hua:before {
+  content: "\e66a";
+}
+
+.icon-ju1:before {
+  content: "\e66b";
+}
+
+.icon-huo:before {
+  content: "\e66c";
+}
+
+.icon-301:before {
+  content: "\e67c";
+}
+
+.icon-7:before {
+  content: "\e67d";
+}
+
+.icon-mian:before {
+  content: "\e67e";
+}
+
+.icon-jushoucanggift:before {
+  content: "\e684";
+}
+
+.icon-liwu:before {
+  content: "\e685";
+}
+
+.icon-yuyin:before {
+  content: "\e687";
+}
+
 .wrapper {
   width: 1150px;
   margin: 0 auto;
@@ -161,6 +374,9 @@ header .right-nav i {
   position: absolute;
   top: -7px;
   left: 0;
+}
+.shopping-status .step2 {
+  text-align: center;
 }
 .shopping-status .step2::after {
   display: inline-block;
@@ -240,36 +456,8 @@ header .right-nav i {
   width: 110px;
   text-align: right;
 }
-.cart-title .allselect {
-  position: relative;
-  width: 76px;
-}
-.cart-title .allselect::after {
-  display: inline-block;
-  content: "";
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: absolute;
-  left: -1px;
-  top: 17px;
-  cursor: pointer;
-}
-.cart-title .allselect .iconfont {
-  color: #fff;
-  position: absolute;
-  z-index: 999;
-  left: -3px;
-  top: 1px;
-  font-size: 20px;
-}
-.cart-title .allselect .iconfont:hover {
-  color: #444;
-}
 
 .paylist {
-  margin-top: 200px;
   background: #e0e0e0;
   width: 100%;
   height: 50px;
@@ -293,10 +481,10 @@ header .right-nav i {
   color: #017cf8;
 }
 .paylist .chosen {
-  width: 76px;
+  width: 100px;
   position: absolute;
   bottom: 16px;
-  left: 460px;
+  left: 440px;
 }
 .paylist .countnumber {
   width: 260px;
@@ -327,32 +515,11 @@ header .right-nav i {
 }
 .paylist .allselect {
   position: absolute;
-  bottom: 16px;
-  left: 30px;
-  width: 76px;
+  left: 45px;
+  top: 16px;
 }
-.paylist .allselect::after {
-  display: inline-block;
-  content: "";
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: absolute;
-  left: -1px;
-  top: 1px;
-  cursor: pointer;
-}
-.paylist .allselect .iconfont {
-  color: transparent;
-  position: absolute;
-  z-index: 999;
-  left: -2px;
-  top: -1px;
-  font-size: 20px;
-}
-.paylist .allselect .iconfont:hover {
-  color: #000;
+.paylist .amount {
+  color: #d0021b;
 }
 
 .item {
@@ -362,43 +529,14 @@ header .right-nav i {
   height: 150px;
   position: relative;
 }
-.item .allselect {
-  position: absolute;
-  bottom: 30px;
-  left: 60px;
-  width: 76px;
-}
-.item .allselect::after {
-  display: inline-block;
-  content: "";
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 1px solid #c0c0c0;
-  background-color: #fff;
-  position: absolute;
-  left: -33px;
-  top: 85px;
-  cursor: pointer;
-}
-.item .allselect .iconfont {
-  color: transparent;
-  position: absolute;
-  z-index: 999;
-  left: -34px;
-  top: 84px;
-  font-size: 20px;
-}
-.item .allselect .iconfont:hover {
-  color: #000;
-}
 .item img {
   width: 64px;
   height: 85px;
   display: inline-block;
   border: 1px solid #e0e0e0;
   vertical-align: middle;
-  margin-top: 51px;
+  margin-top: 11px;
+  margin-left: 6px;
 }
 .item div {
   display: inline-block;
@@ -412,32 +550,42 @@ header .right-nav i {
 .item .goodsprice {
   width: 100px;
   position: absolute;
-  left: 475px;
+  left: 462px;
   top: 65px;
 }
 .item .goodscount {
   width: 100px;
   position: absolute;
-  left: 625px;
+  left: 615px;
   top: 65px;
 }
 .item .goodssum {
   width: 100px;
   position: absolute;
-  left: 755px;
+  left: 732px;
   top: 65px;
   color: #d0021b;
 }
 .item .goodsoption {
   position: absolute;
   text-align: right;
-  right: 30px;
+  right: 45px;
   top: 54px;
 }
 .item .goodsoption div {
   display: block;
   width: 80px;
   cursor: pointer;
+}
+.item .allselect {
+  position: absolute;
+  left: 52.5px;
+  top: 26px;
+}
+.item .allselect #g-checkbox {
+  position: absolute;
+  top: 48.5px;
+  left: -12.5px;
 }
 
 footer {
