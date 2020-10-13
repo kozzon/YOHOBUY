@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin:*');   //任意地址都可以访问
+header('Access-Control-Allow-Method:POST,GET');  //跨越请求的方式
 //设置字符编码。
 header('content-type:text/html;charset=utf-8');
 define('HOST','localhost');//主机名

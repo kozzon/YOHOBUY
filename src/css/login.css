@@ -333,275 +333,40 @@ header .right-nav i {
   vertical-align: middle;
 }
 
-.shopping-status {
-  padding: 40px 0 50px;
-  position: relative;
-}
-.shopping-status .myshoppingcart {
-  display: block;
-  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.cart.png?t=1594090249632) -234px -38px;
-  background-size: 460px 217px;
-  width: 150px;
-  height: 42px;
-}
-.shopping-status ul {
-  border-top: 2px solid #b0b0b0;
-  width: 440px;
-  position: absolute;
-  right: 0;
-  top: 40px;
-}
-.shopping-status li {
-  font-size: 15px;
-  display: block;
-  float: left;
-  position: relative;
-  width: 33.33%;
-  color: #999;
-  line-height: 40px;
-}
-.shopping-status .step1 {
-  text-align: left;
-  color: #000;
-}
-.shopping-status .step1::after {
+.banner {
+  width: 495px;
+  height: 318px;
+  border-right: 1px solid #dfdfdf;
+  margin: 100px 0 100px 0;
   display: inline-block;
-  content: "";
-  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.cart.png?t=1594090249632) -20px -205px;
-  background-size: 460px 217px;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: -7px;
-  left: 0;
-}
-.shopping-status .step2 {
-  text-align: center;
-}
-.shopping-status .step2::after {
-  display: inline-block;
-  content: "";
-  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.cart.png?t=1594090249632) 0px -205px;
-  background-size: 460px 217px;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: -7px;
-  left: 50%;
-  margin-left: -6px;
-}
-.shopping-status .step3 {
-  text-align: right;
-}
-.shopping-status .step3::after {
-  display: inline-block;
-  content: "";
-  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.cart.png?t=1594090249632) 0px -205px;
-  background-size: 460px 217px;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: -7px;
-  right: 0;
-}
-
-.prompt {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 24px;
-  line-height: 24px;
-  padding: 4px 0;
-  color: #818181;
-  font-size: 14px;
-  background-color: #f0f0f0;
-}
-.prompt p {
-  display: inline-block;
-  margin-left: 30px;
-}
-.prompt i {
-  float: right;
-  font-size: 14px;
-  margin-right: 30px;
-  cursor: pointer;
-}
-
-.cart-title {
-  width: 100%;
-  background: #444;
-  height: 50px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-}
-.cart-title p {
-  display: inline-block;
-  line-height: 50px;
-  color: #fff;
-}
-.cart-title .goodsinfo {
-  width: 320px;
-}
-.cart-title .price {
-  width: 130px;
-}
-.cart-title .count {
-  width: 130px;
-}
-.cart-title .sum {
-  width: 140px;
-}
-.cart-title .option {
-  width: 110px;
-  text-align: right;
-}
-
-.paylist {
-  background: #e0e0e0;
-  margin-top: 20px;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  font-size: 14px;
   float: left;
 }
-.paylist p {
+.banner img {
   display: inline-block;
-}
-.paylist .goodsmove {
-  position: absolute;
-  bottom: 16px;
-  left: 94px;
-}
-.paylist .goodsmove a {
-  display: inline-block;
-  margin-left: 15px;
-  color: #017cf8;
-}
-.paylist .chosen {
-  width: 100px;
-  position: absolute;
-  bottom: 16px;
-  left: 440px;
-}
-.paylist .countnumber {
-  width: 260px;
-  height: 100%;
-  position: absolute;
-  left: 580px;
-  top: 7px;
-  text-align: left;
-}
-.paylist .countnumber span {
-  display: inline-block;
-  width: 100%;
-}
-.paylist .pay {
-  width: 150px;
-  height: 50px;
-  padding: 0;
-  text-align: center;
-  line-height: 50px;
-  border: 0;
-  font-size: 20px;
-  background-color: #d0021b;
-  cursor: pointer;
-  float: right;
-}
-.paylist .pay a {
-  color: #fff;
-}
-.paylist .allselect {
-  position: absolute;
-  left: 45px;
-  top: 16px;
-}
-.paylist .amount {
-  color: #d0021b;
+  width: 252px;
+  height: 190px;
+  margin-left: 120px;
+  margin-top: 64px;
 }
 
-.item {
-  margin: 20px 0;
-  border: 1px solid #e0e0e0;
-  width: 100%;
-  height: 150px;
-  position: relative;
-}
-.item img {
-  width: 64px;
-  height: 85px;
-  display: inline-block;
-  border: 1px solid #e0e0e0;
-  vertical-align: middle;
-  margin-top: 11px;
-  margin-left: 6px;
-}
-.item div {
+.loginbox {
+  margin-left: 80px;
+  margin-top: 185px;
   display: inline-block;
 }
-.item .goodstitle {
-  width: 240px;
-  position: absolute;
-  left: 150px;
-  top: 65px;
+.loginbox p {
+  height: 45px;
+  width: 380px;
+  margin: 5px 0;
 }
-.item .goodsprice {
-  width: 100px;
-  position: absolute;
-  left: 462px;
-  top: 65px;
-}
-.item .goodscount {
-  width: 100px;
-  position: absolute;
-  left: 605px;
-  top: 65px;
-}
-.item .goodssum {
-  width: 100px;
-  position: absolute;
-  left: 732px;
-  top: 65px;
-  color: #d0021b;
-}
-.item .goodsoption {
-  position: absolute;
-  text-align: right;
-  right: 45px;
-  top: 54px;
-}
-.item .goodsoption div {
-  display: block;
-  width: 80px;
-  cursor: pointer;
-}
-.item .goodsoption a {
-  color: #000;
-}
-.item .allselect {
-  position: absolute;
-  left: 52.5px;
-  top: 26px;
-}
-.item .allselect #g-checkbox {
-  position: absolute;
-  top: 48.5px;
-  left: -12.5px;
-}
-
-.numbercountadd,
-.numbercountminus {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  text-align: center;
-  line-height: 16px;
-  font-size: 12px;
-  border: 1px solid;
-  cursor: pointer;
+.loginbox input {
+  width: 268px;
+  height: 43px;
+  border: 1px solid #dbdbdb;
+  color: #9a9a9a;
+  text-indent: 10px;
+  font-size: 16px;
+  line-height: 43px;
 }
 
 footer {
@@ -842,4 +607,4 @@ footer {
   text-align: center;
 }
 
-/*# sourceMappingURL=cart.css.map */
+/*# sourceMappingURL=login.css.map */

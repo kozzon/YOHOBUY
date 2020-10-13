@@ -18,7 +18,7 @@ require(['config'], function() {
                     $('.bf img').attr('src', data.url);
                     $('.goodstitle').html(data.title);
                     $('.goods-price').html(`￥${data.price}`);
-                    console.log(data.piclisturl.split(','));
+                    // console.log(data.piclisturl.split(','));
                     let picarr = data.piclisturl.split(','); //数据转换成数组
                     let strhtml = '';
                     $.each(picarr, function(index, value) {
@@ -57,17 +57,17 @@ require(['config'], function() {
                 //cookie
                 let arrsid = [];
                 let arrnum = [];
-                let arrsize = [];
+                // let arrprice = [];
 
                 function getcookie() {
                     if ($.cookie('cookiesid') && $.cookie('cookienum')) { //cookie存在
                         arrsid = $.cookie('cookiesid').split(','); //获取cookie的sid，存放到数组中。
                         arrnum = $.cookie('cookienum').split(','); //获取cookie的数量，存放到数组中。
-                        // arrsize = $.cookie('cookiesize').split(','); //获取cookie的尺寸，存放到数组中。
+                        // arrprice = $.cookie('cookieprice').split(','); //获取cookie的尺寸，存放到数组中。
                     } else { //cookie不存在
                         arrsid = [];
                         arrnum = [];
-                        // arrsize = [];
+                        // arrprice = [];
                     }
                 }
                 $('.addtocart').bind("selectstart", function() { return false; });
@@ -78,20 +78,21 @@ require(['config'], function() {
                         $.cookie('cookiesid', arrsid, { expires: 10, path: '/' }); //插件完成的cookie的添加。
                         arrnum.push($('#count').text()); //添加商品的数量
                         $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
-                        // arrsize.push($('.buttonchosen').text()); //添加商品的尺寸
-                        // $.cookie('cookiesize', arrsize, { expires: 10, path: '/' });
+                        // arrprice.push(+$('.goods-price').text().substring(1)); //添加商品的尺寸
+                        // console.log(+$('.goods-price').text().substring(1));
+                        // console.log(typeof $('.goods-price').text().substring(1));
+                        // $.cookie('cookieprice', arrprice, { expires: 10, path: '/' });
                     } else {
                         let index = $.inArray(sid, arrsid); //sid在数组中的位置
                         let num = parseInt(arrnum[index]); //sid对应的数量
-                        // let size = arrsize[index];
+                        // let price = arrprice[index];
                         arrnum[index] = num + parseInt($('#count').text()); //原来的数量+新添加数量进行赋值
-                        // arrsize[index] = size + $('.buttonchosen').text()
+                        // arrprice[index] = price + $('.goods-price').text().substring(1);
+                        // arrprice.push('+$('.goods-price').text().substring(1)'); //添加商品的尺寸
                         $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
-                        // $.cookie('cookiesize', arrsize, { expires: 10, path: '/' });
+                        // $.cookie('cookieprice', arrprice, { expires: 10, path: '/' });
                     }
                 })
-
-
             }(),
             //+-点击数量变化
             number: ! function() {

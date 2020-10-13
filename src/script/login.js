@@ -1,0 +1,2 @@
+require(['rightfixed']);
+require(['loginlink']);

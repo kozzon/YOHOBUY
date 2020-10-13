@@ -158,6 +158,7 @@ header {
 
 .paylist {
     background: #e0e0e0;
+    margin-top: 20px;
     width: 100%;
     height: 50px;
     overflow: hidden;
@@ -254,7 +255,7 @@ header {
     .goodscount {
         width: 100px;
         position: absolute;
-        left: 615px;
+        left: 605px;
         top: 65px;
     }
     .goodssum {
@@ -274,6 +275,9 @@ header {
             width: 80px;
             cursor: pointer;
         }
+        a {
+            color: #000;
+        }
     }
     .allselect {
         position: absolute;
@@ -285,4 +289,16 @@ header {
             left: -12.5px;
         }
     }
+}
+
+.numbercountadd,
+.numbercountminus {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    border: 1px solid;
+    cursor: pointer;
 }
