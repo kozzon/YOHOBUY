@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2020-10-14 08:48:30
+Date: 2020-10-14 17:55:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -172,10 +172,11 @@ CREATE TABLE `registry` (
   `time` varchar(255) NOT NULL,
   `phone` varchar(200) NOT NULL,
   PRIMARY KEY (`sid`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of registry
 -- ----------------------------
-INSERT INTO `registry` VALUES ('20', '123123', 'b14fde150b6c47f7ed186cd001883cf8ff6ba522', 'jin8645@foxmail.com', '2020-10-13 21:42:01', '13282831335');
-INSERT INTO `registry` VALUES ('27', '111111', 'e8f0e29b3877500a208fdcc5f4da39104e26b18b', 'jin8645@foxmail.com', '2020-10-13 22:00:43', '13738403911');
+INSERT INTO `registry` VALUES ('31', '111111', '02cd3d366af1835ca1a9c10d9401581ff1517f7e', '123@qq.com', '2020-10-14 09:52:24', '13282831335');
+INSERT INTO `registry` VALUES ('32', '123456', '360e46f15f432af83c77017177a759aba8a58519', 'jin8645@foxmail.com', '2020-10-14 10:05:47', '13282831335');
+INSERT INTO `registry` VALUES ('33', '111222', 'f9b07e92ae1aaddb4b2f544614930f7ab5202c2f', '123@qq.com', '2020-10-14 10:53:06', '13282831335');

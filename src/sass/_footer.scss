@@ -1,25 +1,25 @@
 @charset "utf-8";
+@import "base";
 footer {
-    width: 100%;
-    background: #000;
+    width: $hundred;
+    background: $b;
 }
 
 .footer-t {
-    font-size: 12px;
     height: 32px;
-    line-height: 32px;
     padding: 15px 0 7px 0;
-    color: white;
-    border-bottom: 1px solid #262626;
+    color: $w;
+    @include font(12px, 32px, $n0, $n0);
+    @include border(border-bottom, 1px, solid, $d26);
     div {
         display: inline-block;
         margin: 0 60px 0 0;
     }
     i {
-        color: red;
+        color: $r;
     }
     a {
-        color: white;
+        color: $w;
     }
     .iconfont {
         font-size: 27px;
@@ -29,9 +29,8 @@ footer {
 
 .footer-nav {
     font-size: 12px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
+    color: $w;
+    @include display(flex, space-between, $n0);
     ul {
         margin-top: 20px;
     }
@@ -39,7 +38,7 @@ footer {
         margin-bottom: 10px;
     }
     a {
-        color: #666;
+        color: $d6;
         &:hover {
             text-decoration: underline;
         }
@@ -49,27 +48,25 @@ footer {
 .footer-info {
     margin-top: 20px;
     font-size: 12px;
-    display: flex;
-    justify-content: space-between;
+    @include display(flex, space-between, $n0);
     img {
         display: inline-block;
     }
     a,
     span {
-        color: #666;
+        color: $d6;
     }
     .info-l {
         width: 23%;
-        display: flex;
-        justify-content: space-between;
+        @include display(flex, space-between, $n0);
         margin-top: 10px;
         .govicon {
             width: 76px;
             height: 34px;
             display: inline-block;
-            background-color: #fff;
-            border-radius: 2px;
+            background-color: $w;
             text-align: center;
+            @include border(border-radius, 2px, $n0, $n0);
             img {
                 margin-top: 5px;
             }
@@ -92,44 +89,35 @@ footer {
 }
 
 .footer-bottom {
-    color: #666;
-    font-size: 12px;
+    color: $d6;
     padding: 20px 0 20px 0;
-    border-bottom: 1px solid #262626;
-    text-align: center;
+    @include border(border-bottom, 1px, solid, $d26);
+    @include font(12px, $n0, center, $n0);
 }
 
 .footer-friend {
     font-size: 12px;
     width: 95%;
-    display: flex;
-    justify-content: space-between;
+    @include display(flex, space-between, $n0);
     padding: 10px 0;
     span {
         display: inline-block;
-        color: #fff;
+        color: $w;
     }
     a {
-        color: #666;
+        color: $d6;
     }
 }
 
 .right-floating {
-    position: fixed;
-    width: 60px;
-    bottom: 20px;
-    z-index: 4;
-    left: 100%;
-    right: 20px;
     margin-left: auto;
-    display: none;
+    @include position(60px, $n0, fixed, $n0, 20px, 20px, 100%);
+    @include display(none, $n0, 4);
     .code-box {
         width: 60px;
         height: 60px;
-        text-align: center;
-        line-height: 50px;
-        color: #fff;
-        background: #000;
+        @include font($n0, 50px, center);
+        @include color($w, $b);
         opacity: .5;
         cursor: pointer;
         .code-img {
@@ -143,15 +131,9 @@ footer {
         }
     }
     .returntop {
-        width: 60px;
-        height: 60px;
-        text-align: center;
-        line-height: 60px;
-        color: #fff;
-        background: #000;
-        opacity: .5;
+        @extend .code-box;
+        @include font($n0, 60px, center);
         margin-top: 20px;
-        cursor: pointer;
         .iconfont {
             font-size: 30px;
         }
@@ -162,27 +144,22 @@ footer {
 }
 
 .code-box-content {
-    position: absolute;
-    bottom: -10px;
-    left: -300px;
-    width: 290px;
-    height: 180px;
     padding: 0 6px;
-    z-index: 1000;
     background-color: transparent;
     text-align: center;
-    display: none;
+    @include position(290px, 180px, absolute, $n0, $n0, -10px, -300px);
+    @include display(none, $n0, 1000);
     .content {
         width: 90%;
         height: 100%;
         margin: 0 auto;
-        background-color: #f4f4f4
+        background-color: $f4;
     }
     .content-left,
     .content-right {
         width: 110px;
         display: inline-block;
-        background-color: #f4f4f4;
+        background-color: $f4;
     }
     .content-right {
         margin-top: 0;
@@ -195,13 +172,11 @@ footer {
     }
     p,
     a {
-        line-height: 20px;
+        @include font(12px, 20px, center);
         display: block;
-        font-size: 12px;
-        text-align: center;
-        color: #000;
+        color: $b;
     }
     a {
-        color: red;
+        color: $r;
     }
 }

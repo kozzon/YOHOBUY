@@ -771,11 +771,11 @@ header .wrapper .nav-h-r {
 .floor-title {
   width: 298px;
   height: 31px;
-  line-height: 31px;
-  border: 1px solid;
-  font-size: 16px;
-  text-align: center;
   margin: 80px auto 30px auto;
+  border: 1px solid black;
+  font-size: 16px;
+  line-height: 31px;
+  text-align: center;
 }
 
 .list-f li {
@@ -815,8 +815,8 @@ header .wrapper .nav-h-r {
 }
 .list-stap ul {
   position: absolute;
-  left: 0px;
   top: 0px;
+  left: 0px;
 }
 .list-stap ul li {
   width: 1150px;
@@ -824,17 +824,16 @@ header .wrapper .nav-h-r {
 }
 .list-stap #sleft,
 .list-stap #sright {
-  display: inline-block;
+  margin-top: -30px;
+  color: white;
   background-color: #999;
+  font-size: 60px;
+  line-height: 50px;
+  text-align: center;
   width: 60px;
   height: 60px;
-  text-align: center;
-  line-height: 50px;
   position: absolute;
-  top: 50%;
-  margin-top: -30px;
-  color: #fff;
-  font-size: 60px;
+  top: 60%;
   text-decoration: none;
   display: none;
 }
@@ -865,19 +864,19 @@ header .wrapper .nav-h-r {
   width: 185px;
   height: 86px;
   position: absolute;
-  right: -8px;
   top: 0px;
+  right: -8px;
   background: url(https://cdn.yoho.cn/yohobuy-node/6.10.6/img/index/logo-brand-line.png?172fa78857b) no-repeat 50%;
 }
 .list-s .f-tap a {
-  color: #000;
+  color: black;
   font-size: 32px;
   font-weight: 900;
 }
 .list-s .f-tap .a-l {
   position: absolute;
-  left: 40px;
   top: 15px;
+  left: 40px;
 }
 .list-s .f-tap .a-r {
   position: absolute;
@@ -885,13 +884,15 @@ header .wrapper .nav-h-r {
   bottom: 15px;
 }
 .list-s .last-more {
-  width: 185px;
-  height: 86px;
+  line-height: 86px;
   text-align: center;
   line-height: 86px;
+  text-align: center;
+  width: 185px;
+  height: 86px;
   position: absolute;
-  right: -8px;
   top: 188px;
+  right: -8px;
 }
 .list-s .last-more a {
   color: black;
@@ -923,8 +924,8 @@ header .wrapper .nav-h-r {
 }
 .list-t .pic-1 {
   position: absolute;
-  left: 0;
   top: 160px;
+  left: 0;
 }
 .list-t .pic-1 img {
   height: 86px;
@@ -941,11 +942,11 @@ header .wrapper .nav-h-r {
   margin-left: 193px;
 }
 .list-t .list-t-nav {
-  position: absolute;
-  left: 0;
-  top: 256px;
   width: 185px;
   height: 248px;
+  position: absolute;
+  top: 256px;
+  left: 0;
   background-color: #f8f8f8;
 }
 .list-t .list-t-nav a {
@@ -953,10 +954,10 @@ header .wrapper .nav-h-r {
   display: inline-block;
   width: 50%;
   height: 38px;
+  color: black;
+  font-size: 14px;
   line-height: 38px;
   text-align: center;
-  color: #000;
-  font-size: 14px;
 }
 
 .list-fo {
@@ -981,21 +982,21 @@ header .wrapper .nav-h-r {
 .floor-title-more {
   font-size: 14px;
   width: 120px;
-  background-color: #000;
-  color: #fff;
+  color: white;
+  background-color: black;
 }
 
 footer {
   width: 100%;
-  background: #000;
+  background: black;
 }
 
 .footer-t {
-  font-size: 12px;
   height: 32px;
-  line-height: 32px;
   padding: 15px 0 7px 0;
   color: white;
+  font-size: 12px;
+  line-height: 32px;
   border-bottom: 1px solid #262626;
 }
 .footer-t div {
@@ -1015,7 +1016,7 @@ footer {
 
 .footer-nav {
   font-size: 12px;
-  color: #fff;
+  color: white;
   display: flex;
   justify-content: space-between;
 }
@@ -1055,9 +1056,9 @@ footer {
   width: 76px;
   height: 34px;
   display: inline-block;
-  background-color: #fff;
-  border-radius: 2px;
+  background-color: white;
   text-align: center;
+  border-radius: 2px;
 }
 .footer-info .info-l .govicon img {
   margin-top: 5px;
@@ -1079,9 +1080,9 @@ footer {
 
 .footer-bottom {
   color: #666;
-  font-size: 12px;
   padding: 20px 0 20px 0;
   border-bottom: 1px solid #262626;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -1094,33 +1095,33 @@ footer {
 }
 .footer-friend span {
   display: inline-block;
-  color: #fff;
+  color: white;
 }
 .footer-friend a {
   color: #666;
 }
 
 .right-floating {
-  position: fixed;
-  width: 60px;
-  bottom: 20px;
-  z-index: 4;
-  left: 100%;
-  right: 20px;
   margin-left: auto;
+  width: 60px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  left: 100%;
   display: none;
+  z-index: 4;
 }
-.right-floating .code-box {
+.right-floating .code-box, .right-floating .returntop {
   width: 60px;
   height: 60px;
-  text-align: center;
   line-height: 50px;
-  color: #fff;
-  background: #000;
+  text-align: center;
+  color: white;
+  background-color: black;
   opacity: .5;
   cursor: pointer;
 }
-.right-floating .code-box .code-img {
+.right-floating .code-box .code-img, .right-floating .returntop .code-img {
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -1130,15 +1131,9 @@ footer {
   margin-top: 16px;
 }
 .right-floating .returntop {
-  width: 60px;
-  height: 60px;
-  text-align: center;
   line-height: 60px;
-  color: #fff;
-  background: #000;
-  opacity: .5;
+  text-align: center;
   margin-top: 20px;
-  cursor: pointer;
 }
 .right-floating .returntop .iconfont {
   font-size: 30px;
@@ -1148,16 +1143,16 @@ footer {
 }
 
 .code-box-content {
+  padding: 0 6px;
+  background-color: transparent;
+  text-align: center;
+  width: 290px;
+  height: 180px;
   position: absolute;
   bottom: -10px;
   left: -300px;
-  width: 290px;
-  height: 180px;
-  padding: 0 6px;
-  z-index: 1000;
-  background-color: transparent;
-  text-align: center;
   display: none;
+  z-index: 1000;
 }
 .code-box-content .content {
   width: 90%;
@@ -1182,21 +1177,21 @@ footer {
 }
 .code-box-content p,
 .code-box-content a {
-  line-height: 20px;
-  display: block;
   font-size: 12px;
+  line-height: 20px;
   text-align: center;
-  color: #000;
+  display: block;
+  color: black;
 }
 .code-box-content a {
   color: red;
 }
 
 .codefixed {
+  width: 117px;
   position: fixed;
   top: 260px;
   right: 20px;
-  width: 117px;
   padding-top: 20px;
   border: none;
   z-index: 9999;
@@ -1216,11 +1211,11 @@ footer {
   height: 116px;
 }
 .codefixed span {
-  display: block;
   font-size: 12px;
-  height: 20px;
   line-height: 12px;
   text-align: center;
+  display: block;
+  height: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */

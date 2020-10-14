@@ -1,55 +1,5 @@
  @charset "utf-8";
- $hundred:100%;
- $n0:null;
- $r:red;
- $b:black;
- $f4:#f4f4f4;
- $e8:#8e8e8e;
- $d7:#d71d32;
- $bf: #86bf4a;
- //边框
- @mixin border($attr:border, $size:1px, $style:solid, $color:$b) {
-     #{$attr}: $size $style $color;
- }
- 
- //版心
- @mixin wrapper($width:1150px, $margin: 0 auto) {
-     width: $width;
-     margin: $margin;
- }
- 
- //定位
- @mixin position($width, $height, $pistion:relative, $top:$n0, $right:$n0, $bottom:$n0, $left:$n0) {
-     width: $width;
-     height: $height;
-     position: $pistion;
-     top: $top;
-     right: $right;
-     bottom: $bottom;
-     left: $left;
- }
- 
- //字体
- @mixin font($fontsize, $lineheight:$hundred, $textaligin:center, $textindent:$n0) {
-     font-size: $fontsize;
-     line-height: $lineheight;
-     text-align: $textaligin;
-     text-indent: $textindent;
- }
- 
- //display
- @mixin display($display, $jc:$n0, $zindex:0) {
-     display: $display;
-     justify-content: $jc;
-     z-index: $zindex;
- }
- 
- //color
- @mixin color($color, $backcolor) {
-     color: $color;
-     background-color: $backcolor;
- }
- 
+ @import "base";
  .wrapper {
      @include wrapper()
  }

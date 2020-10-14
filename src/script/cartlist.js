@@ -19,7 +19,7 @@ require(['config'], function() {
                             // var price = value.price;
                             if (value.sid == sid) { //数据接口的sid和当前商品的sid进行比较，如果相等，直接赋值。
                                 var strhtml = '';
-                                strhtml += '<div class="item"><div class="allselect"><input type="checkbox" name="" id="g-checkbox" value=""/><img src="' + value.url + '" alt=""></div><div class="goodstitle">' + value.title + '</div><div class="goodsprice">￥' + value.price + '</div><div class="goodscount"><span class="numbercountminus">-</span> <div class="goodscountchange">' + num + '</div> <span class="numbercountadd">+</span></div><div class="goodssum">' + (value.price * num).toFixed(2) + '</div><div class="goodsoption"><a href="javascript:;">删除</a><div>移入收藏</div></div></div>';
+                                strhtml += '<div class="item"><div class="allselect"><input type="checkbox" name="" id="g-checkbox" value=""/><img src="' + value.url + '" alt=""></div><div class="goodstitle">' + value.title + '</div><div class="goodsprice">￥' + value.price + '</div><div class="goodscount"><span class="numbercountminus">-</span> <div class="goodscountchange">' + num + '</div> <span class="numbercountadd">+</span></div><div class="goodssum">￥' + (value.price * num).toFixed(2) + '</div><div class="goodsoption"><a href="javascript:;">删除</a><div>移入收藏</div></div></div>';
                                 $('.item-list').append(strhtml);
                             }
                             selectAll();
@@ -34,7 +34,7 @@ require(['config'], function() {
                     var goodprice = +$(this).parent().parent().find('.goodsprice').text().substring(1);
                     ++goodsnum;
                     $(this).parent().find('.goodscountchange').text(goodsnum);
-                    $(this).parent().parent().find('.goodssum').text(`￥${(goodprice*goodsnum).toFixed(2)}`);
+                    $(this).parent().parent().find('.goodssum').text('￥' + (goodprice * goodsnum).toFixed(2));
                 })
                 $('.item-list').on('click', '.numbercountminus', function() {
                     $('.numbercountminus').bind("selectstart", function() { return false; });
@@ -45,7 +45,7 @@ require(['config'], function() {
                         goodsnum = 1
                     }
                     $(this).parent().find('.goodscountchange').text(goodsnum);
-                    $(this).parent().parent().find('.goodssum').text(`￥${(goodprice*goodsnum).toFixed(2)}`);
+                    $(this).parent().parent().find('.goodssum').text('￥' + (goodprice * goodsnum).toFixed(2));
                 });
 
                 //删除
@@ -66,8 +66,8 @@ require(['config'], function() {
                             $index = index;
                         }
                     });
-                    arrsid.splice($index, 1);
-                    arrnum.splice($index, 1);
+                    arrsid.splice($index + 1, 1);
+                    arrnum.splice($index + 1, 1);
 
                     $.cookie('cookiesid', arrsid, { expires: 10, path: '/' })
                     $.cookie('cookienum', arrnum, { expires: 10, path: '/' })
@@ -128,7 +128,7 @@ require(['config'], function() {
                         }
                     });
                     $('.amountnumber').html(allcount);
-                    $('.amount').html(`￥${(allprice).toFixed(2)}`);
+                    $('.amount').html('￥' + (allprice).toFixed(2));
                 };
 
                 //全选

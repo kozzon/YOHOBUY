@@ -1,12 +1,11 @@
 @charset "utf-8";
+@import "base";
 .floor-title {
     width: 298px;
     height: 31px;
-    line-height: 31px;
-    border: 1px solid;
-    font-size: 16px;
-    text-align: center;
     margin: 80px auto 30px auto;
+    @include border();
+    @include font(16px, 31px, center);
 }
 
 .list-f {
@@ -48,9 +47,7 @@
         margin-right: 2px;
     }
     ul {
-        position: absolute;
-        left: 0px;
-        top: 0px;
+        @include position($n0, $n0, absolute, 0px, $n0, $n0, 0px);
         li {
             width: 1150px;
             float: left;
@@ -58,17 +55,10 @@
     }
     #sleft,
     #sright {
-        display: inline-block;
-        background-color: #999;
-        width: 60px;
-        height: 60px;
-        text-align: center;
-        line-height: 50px;
-        position: absolute;
-        top: 50%;
         margin-top: -30px;
-        color: #fff;
-        font-size: 60px;
+        @include color($w, $d9);
+        @include font(60px, 50px, center, $n0);
+        @include position(60px, 60px, absolute, 60%, $n0, $n0, $n0);
         text-decoration: none;
         display: none;
     }
@@ -96,38 +86,26 @@
     }
     .f-tap {
         display: inline-block;
-        width: 185px;
-        height: 86px;
-        position: absolute;
-        right: -8px;
-        top: 0px;
+        @include position(185px, 86px, absolute, 0px, -8px, $n0, $n0);
         background: url(https://cdn.yoho.cn/yohobuy-node/6.10.6/img/index/logo-brand-line.png?172fa78857b) no-repeat 50%;
         a {
-            color: #000;
+            color: $b;
             font-size: 32px;
             font-weight: 900;
         }
         .a-l {
-            position: absolute;
-            left: 40px;
-            top: 15px;
+            @include position($n0, $n0, absolute, 15px, $n0, $n0, 40px);
         }
         .a-r {
-            position: absolute;
-            right: 40px;
-            bottom: 15px;
+            @include position($n0, $n0, absolute, $n0, 40px, 15px, $n0);
         }
     }
     .last-more {
-        width: 185px;
-        height: 86px;
-        text-align: center;
-        line-height: 86px;
-        position: absolute;
-        right: -8px;
-        top: 188px;
+        @include font($n0, 86px, center, $n0);
+        @include font($n0, 86px, center, $n0);
+        @include position(185px, 86px, absolute, 188px, -8px, $n0, $n0);
         a {
-            color: black;
+            color: $b;
             &:hover {
                 text-decoration: underline;
             }
@@ -158,9 +136,7 @@
         }
     }
     .pic-1 {
-        position: absolute;
-        left: 0;
-        top: 160px;
+        @include position($n0, $n0, absolute, 160px, $n0, $n0, 0);
         img {
             height: 86px;
         }
@@ -179,21 +155,15 @@
         margin-left: 193px;
     }
     .list-t-nav {
-        position: absolute;
-        left: 0;
-        top: 256px;
-        width: 185px;
-        height: 248px;
+        @include position(185px, 248px, absolute, 256px, $n0, $n0, 0);
         background-color: #f8f8f8;
         a {
             float: left;
             display: inline-block;
             width: 50%;
             height: 38px;
-            line-height: 38px;
-            text-align: center;
-            color: #000;
-            font-size: 14px;
+            color: $b;
+            @include font(14px, 38px, center);
         }
     }
 }
@@ -220,6 +190,5 @@
 .floor-title-more {
     font-size: 14px;
     width: 120px;
-    background-color: #000;
-    color: #fff;
+    @include color($w, $b);
 }

@@ -1,16 +1,12 @@
 @charset "utf-8";
+@import "base";
 .codefixed {
-    position: fixed;
-    top: 260px;
-    right: 20px;
-    width: 117px;
+    @include position(117px, $n0, fixed, 260px, 20px);
     padding-top: 20px;
     border: none;
     z-index: 9999;
     i {
-        position: absolute;
-        top: -8px;
-        right: -10px;
+        @include position($n0, $n0, absolute, -8px, -10px);
         display: inline-block;
         font-size: 18px;
         font-weight: 900;
@@ -22,10 +18,8 @@
         height: 116px;
     }
     span {
+        @include font(12px, 12px, center);
         display: block;
-        font-size: 12px;
         height: 20px;
-        line-height: 12px;
-        text-align: center;
     }
 }
