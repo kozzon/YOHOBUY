@@ -3,10 +3,9 @@ require(['config'], function() {
         return {
             cartlist: ! function() {
                 if ($.cookie('cookiesid') && $.cookie('cookienum')) { //cookie存在,获取cookie转成数组
-                    let sid = $.cookie('cookiesid').split(','); //[1,2,3]
-                    let num = $.cookie('cookienum').split(','); //[100,200,300]
-                    // let price = $.cookie('cookieprice').split(',');
-                    for (let i = 0; i < sid.length; i++) {
+                    var sid = $.cookie('cookiesid').split(','); //[1,2,3]
+                    var num = $.cookie('cookienum').split(','); //[100,200,300]
+                    for (var i = 0; i < sid.length; i++) {
                         rendercart(sid[i], num[i])
                     }
                 }
@@ -17,29 +16,10 @@ require(['config'], function() {
                         dataType: 'json'
                     }).done(function(data) {
                         $.each(data, function(index, value) {
-                            // let price = value.price;
+                            // var price = value.price;
                             if (value.sid == sid) { //数据接口的sid和当前商品的sid进行比较，如果相等，直接赋值。
-                                let strhtml = '';
-                                strhtml += `
-                            <div class="item">
-                               <div class="allselect">
-                                   <input type="checkbox"  name="" id="g-checkbox" value=""/>
-                                   <img src="${value.url}" alt="">
-                               </div>
-                               <div class="goodstitle">${value.title}</div>
-                               <div class="goodsprice">￥${value.price}</div>
-                               <div class="goodscount">  
-                                   <span class="numbercountminus">-</span> 
-                                   <div class="goodscountchange">${num}</div>
-                                   <span class="numbercountadd">+</span>
-                               </div>
-                               <div class="goodssum">￥${(value.price*num).toFixed(2)}</div>
-                               <div class="goodsoption">
-                                   <a href="javascript:;">删除</a>
-                                   <div>移入收藏</div>
-                               </div>
-                            </div>
-                            `;
+                                var strhtml = '';
+                                strhtml += '<div class="item"><div class="allselect"><input type="checkbox" name="" id="g-checkbox" value=""/><img src="' + value.url + '" alt=""></div><div class="goodstitle">' + value.title + '</div><div class="goodsprice">￥' + value.price + '</div><div class="goodscount"><span class="numbercountminus">-</span> <div class="goodscountchange">' + num + '</div> <span class="numbercountadd">+</span></div><div class="goodssum">' + (value.price * num).toFixed(2) + '</div><div class="goodsoption"><a href="javascript:;">删除</a><div>移入收藏</div></div></div>';
                                 $('.item-list').append(strhtml);
                             }
                             selectAll();
@@ -50,16 +30,16 @@ require(['config'], function() {
                 //+-点击数量变化
                 $('.item-list').on('click', '.numbercountadd', function() {
                     $('.numbercountadd').bind("selectstart", function() { return false; });
-                    let goodsnum = +$(this).parent().find('.goodscountchange').text();
-                    let goodprice = +$(this).parent().parent().find('.goodsprice').text().substring(1);
+                    var goodsnum = +$(this).parent().find('.goodscountchange').text();
+                    var goodprice = +$(this).parent().parent().find('.goodsprice').text().substring(1);
                     ++goodsnum;
                     $(this).parent().find('.goodscountchange').text(goodsnum);
                     $(this).parent().parent().find('.goodssum').text(`￥${(goodprice*goodsnum).toFixed(2)}`);
                 })
                 $('.item-list').on('click', '.numbercountminus', function() {
                     $('.numbercountminus').bind("selectstart", function() { return false; });
-                    let goodsnum = +$(this).parent().find('.goodscountchange').text();
-                    let goodprice = +$(this).parent().parent().find('.goodsprice').text().substring(1);
+                    var goodsnum = +$(this).parent().find('.goodscountchange').text();
+                    var goodprice = +$(this).parent().parent().find('.goodsprice').text().substring(1);
                     --goodsnum;
                     if (goodsnum < 1) {
                         goodsnum = 1
@@ -80,7 +60,7 @@ require(['config'], function() {
                 }
 
                 function delcookie(sid, arrsid) { //sid:当前删除的sid  arrsid:存放sid的数组[3,5,6,7]
-                    let $index = -1; //删除的索引位置
+                    var $index = -1; //删除的索引位置
                     $.each(arrsid, function(index, value) {
                         if (sid === value) {
                             $index = index;
@@ -139,8 +119,8 @@ require(['config'], function() {
 
                 //计算数量及总价
                 function calc() {
-                    let allprice = 0;
-                    let allcount = 0;
+                    var allprice = 0;
+                    var allcount = 0;
                     $('.item').each(function(index, element) {
                         if ($(this).find('#g-checkbox').prop('checked')) { //复选框选中。
                             allcount += +($(this).find('.goodscountchange').html()); //总的件数
@@ -153,12 +133,12 @@ require(['config'], function() {
 
                 //全选
                 function selectAll() {
-                    let all1 = $('.allsel1');
-                    let all2 = $('.allsel2');
-                    let inputlength = 0;
+                    var all1 = $('.allsel1');
+                    var all2 = $('.allsel2');
+                    var inputlength = 0;
                     $('.item').each(function(index, element) {
                         inputlength++;
-                        let inputs = $(this).find('#g-checkbox')
+                        var inputs = $(this).find('#g-checkbox')
                         all1.on('click', function() {
                             inputs.prop('checked', all1.prop('checked'));
                             all2.prop('checked', all1.prop('checked'));
@@ -198,6 +178,30 @@ require(['config'], function() {
                 };
 
             }(),
+            user: ! function() {
+                if ($.cookie('cookieuser')) {
+                    $('.username').css("display", "inline-block");
+                    $('.username').text($.cookie('cookieuser'))
+                    $('.login').css("display", "none");
+                    $('.registry').css("display", "none");
+                    $('.quit').css("display", "inline-block");
+                }
+                $('.quit').on('click', function() {
+                    window.location.reload();
+                    $('.login').css("display", "inline-block");
+                    $('.registry').css("display", "inline-block");
+                    $('.username').css("display", "none");
+                    $('.quit').css("display", "none");
+                    //退出删除cookie
+                    if ($.cookie('cookieuser')) {
+                        $.cookie('cookieuser', null, { expires: -1, path: '/' })
+                    }
+                    if ($.cookie('cookienum') && $.cookie('cookiesid')) {
+                        $.cookie('cookienum', null, { expires: -1, path: '/' });
+                        $.cookie('cookiesid', null, { expires: -1, path: '/' })
+                    }
+                })
+            }()
         }
     })
 })

@@ -1,22 +1,16 @@
 require(['config'], function() {
-    require(['jquery', 'jq_lazyload'], function() {;
+    require(['jquery', 'jq_lazyload', 'jq_cookie'], function() {;
         return {
             index_list_f: ! function() {
-                const list_f = $('.list-f');
+                var list_f = $('.list-f');
                 $.ajax({ //获取远程接口的值
                     url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-f.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
-                    let strhtml = '';
+                    var strhtml = '';
                     $.each(data, function(index, value) { //遍历数组和对象
-                        strhtml += `
-                        <a href="">
-                            <li class="pic-${index}">
-                                <img class="lazy" data-original="${value.url}">
-                            </li>
-                        </a>
-                        `;
+                        strhtml += '<a href=""><li class="pic-' + index + '"><img class="lazy" data-original="' + value.url + '"></li></a>';
                     });
                     list_f.html(strhtml); //追加数据
                     //实现懒加载效果
@@ -26,31 +20,17 @@ require(['config'], function() {
                 })
             }(),
             index_list_s: ! function() {
-                const list_s = $('.list-s');
+                var list_s = $('.list-s');
                 $.ajax({ //获取远程接口的值
                     url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-s.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
-                    let strhtml = '';
+                    var strhtml = '';
                     $.each(data, function(index, value) { //遍历数组和对象
-                        strhtml += `
-                        <a href="">
-                            <li class="pic-${index}">
-                                <img class="lazy" data-original="${value.url}">
-                            </li>
-                        </a>
-                        `;
+                        strhtml += '<a href=""><li class="pic-' + index + '"><img class="lazy" data-original="' + value.url + '"></li></a>';;
                     });
-                    strhtml += `
-                       <li class="f-tap">
-                       <a href="" class="iconfont a-l">&#xe660;</a>
-                       <a href="" class="iconfont a-r">&#xe65f;</a>
-                       </li>
-                       <li class="last-more">
-                            <a href="">MORE ></a>
-                        </li>
-                    `
+                    strhtml += '<li class="f-tap"><a href="" class="iconfont a-l">&#xe660;</a><a href="" class="iconfont a-r">&#xe65f;</a></li><li class="last-more"><a href="">MORE ></a></li>'
                     list_s.html(strhtml); //追加数据
                     //实现懒加载效果
                     $("img.lazy").lazyload({
@@ -59,38 +39,17 @@ require(['config'], function() {
                 })
             }(),
             index_list_t: ! function() {
-                const list_t = $('.list-t');
+                var list_t = $('.list-t');
                 $.ajax({ //获取远程接口的值
                     url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-t.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
-                    let strhtml = '';
+                    var strhtml = '';
                     $.each(data, function(index, value) { //遍历数组和对象
-                        strhtml += `
-                        <a href="">
-                            <li class="pic-${index}">
-                                <img class="lazy" data-original="${value.url}">
-                            </li>
-                        </a>
-                        `;
+                        strhtml += '<a href=""><li class="pic-' + index + '"><img class="lazy" data-original="' + value.url + '"></li></a>';;
                     });
-                    strhtml += `
-                    <li class="list-t-nav">
-                      <a href="">T恤</a>
-                      <a href="">卫衣</a>
-                      <a href="">夹克</a>
-                      <a href="">衬衫</a>
-                      <a href="">POLO</a>
-                      <a href="">风衣</a>
-                      <a href="">PUMA</a>
-                      <a href="">DC</a>
-                      <a href="">Timberland</a>
-                      <a href="">Converse</a>
-                      <a href="">VANS</a>
-                      <a href="">HIPANDA</a>
-                    </li>
-                    `
+                    strhtml += '<li class="list-t-nav"><a href="">T恤</a><a href="">卫衣</a><a href="">夹克</a><a href="">衬衫</a><a href="">POLO</a><a href="">风衣</a><a href="">PUMA</a><a href="">DC</a><a href="">Timberland</a><a href="">Converse</a><a href="">VANS</a><a href="">HIPANDA</a></li>'
                     list_t.html(strhtml); //追加数据
                     //实现懒加载效果
                     $("img.lazy").lazyload({
@@ -99,21 +58,15 @@ require(['config'], function() {
                 })
             }(),
             index_list_fo: ! function() {
-                const list_fo = $('.list-fo');
+                var list_fo = $('.list-fo');
                 $.ajax({ //获取远程接口的值
                     url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-fo.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
-                    let strhtml = '';
+                    var strhtml = '';
                     $.each(data, function(index, value) { //遍历数组和对象
-                        strhtml += `
-                        <a href="">
-                            <li class="pic-${index}">
-                                <img class="lazy" data-original="${value.url}">
-                            </li>
-                        </a>
-                        `;
+                        strhtml += '<a href=""><li class="pic-' + index + '"><img class="lazy" data-original="' + value.url + '"></li></a>';;
                     });
                     list_fo.html(strhtml); //追加数据
                     //实现懒加载效果
@@ -135,7 +88,7 @@ require(['config'], function() {
                     }
                     init() {
                         //事件里面的this指向当前操作的元素对象。方法里面的this指向实例。
-                        let _this = this; //实例对象
+                        var _this = this; //实例对象
                         this.lunbo.hover(function() {
                             // _this.leftarrow.show();
                             // _this.rightarrow.show();
@@ -210,7 +163,7 @@ require(['config'], function() {
                     }
                     init() {
                         //事件里面的this指向当前操作的元素对象。方法里面的this指向实例。
-                        let _this = this; //实例对象
+                        var _this = this; //实例对象
                         this.list.css({ "width": `${_this.piclist.size()*_this.piclist.width()}px` })
                         this.liwidth = this.piclist.width();
                         this.lunbo.hover(function() {
@@ -259,6 +212,25 @@ require(['config'], function() {
                     }
                 }
                 new Stap().init();
+            }(),
+            user: ! function() {
+                if ($.cookie('cookieuser')) {
+                    $('.username').css("display", "inline-block");
+                    $('.username').text($.cookie('cookieuser'))
+                    $('.login').css("display", "none");
+                    $('.registry').css("display", "none");
+                    $('.quit').css("display", "inline-block");
+                }
+                $('.quit').on('click', function() {
+                    window.location.reload();
+                    $('.login').css("display", "inline-block");
+                    $('.registry').css("display", "inline-block");
+                    $('.username').css("display", "none");
+                    $('.quit').css("display", "none");
+                    if ($.cookie('cookieuser')) {
+                        $.cookie('cookieuser', null, { expires: -1, path: '/' })
+                    }
+                })
             }()
         }
     })

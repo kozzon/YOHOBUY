@@ -8,7 +8,7 @@ require(['config'], function() {
                         this.closebutton = $('.codefixed .iconfont');
                     }
                     init() {
-                        let _this = this;
+                        var _this = this;
                         this.closebutton.on('click', function() {
                             _this.codefixed.hide();
                         })

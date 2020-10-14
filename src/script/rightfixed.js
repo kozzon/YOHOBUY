@@ -10,7 +10,7 @@ require(['config'], function() {
                         this.return = $('.returntop');
                     }
                     init() {
-                        let _this = this;
+                        var _this = this;
                         //下拉显示
                         $(window).scroll(
                             function() {

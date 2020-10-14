@@ -329,6 +329,23 @@ header .right-nav {
 header .right-nav span {
   padding: 0 8px;
 }
+header .right-nav .login-t {
+  margin-left: -20px;
+  width: 140px;
+}
+header .right-nav .login-t .username {
+  width: 30px;
+  margin-left: 5px;
+  color: #d0021b;
+}
+header .right-nav .login-t .quit {
+  display: none;
+  width: 50px;
+  margin-left: 10px;
+}
+header .right-nav .login-t a {
+  color: #8e8e8e;
+}
 header .right-nav i {
   vertical-align: middle;
 }

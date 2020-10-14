@@ -26,6 +26,23 @@ header {
         span {
             padding: 0 8px;
         }
+        .login-t {
+            margin-left: -20px;
+            width: 140px;
+            .username {
+                width: 30px;
+                margin-left: 5px;
+                color: #d0021b;
+            }
+            .quit {
+                display: none;
+                width: 50px;
+                margin-left: 10px;
+            }
+            a {
+                color: #8e8e8e;
+            }
+        }
         i {
             vertical-align: middle;
         }

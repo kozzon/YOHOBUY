@@ -2,7 +2,7 @@ require(['config'], function() {
     require(['jquery', 'jq_cookie'], function() {
         return {
             detailrender: ! function() {
-                let sid = location.search.substring(1).split('=')[1];
+                var sid = location.search.substring(1).split('=')[1];
                 if (!sid) {
                     sid = 1;
                 }
@@ -17,16 +17,12 @@ require(['config'], function() {
                     $('.color-name img').attr('src', data.url);
                     $('.bf img').attr('src', data.url);
                     $('.goodstitle').html(data.title);
-                    $('.goods-price').html(`￥${data.price}`);
+                    $('.goods-price').html('￥' + data.price);
                     // console.log(data.piclisturl.split(','));
-                    let picarr = data.piclisturl.split(','); //数据转换成数组
-                    let strhtml = '';
+                    var picarr = data.piclisturl.split(','); //数据转换成数组
+                    var strhtml = '';
                     $.each(picarr, function(index, value) {
-                        strhtml += `  
-                            <li>   
-                                <img src="${value}"/>
-                            </li>
-                        `;
+                        strhtml += '<li><img src="' + value + '"/></li>';
                     });
                     $('.goodsimgs ul').append(strhtml);
 
@@ -55,9 +51,9 @@ require(['config'], function() {
                     });
                 });
                 //cookie
-                let arrsid = [];
-                let arrnum = [];
-                // let arrprice = [];
+                var arrsid = [];
+                var arrnum = [];
+                // var arrprice = [];
 
                 function getcookie() {
                     if ($.cookie('cookiesid') && $.cookie('cookienum')) { //cookie存在
@@ -83,9 +79,9 @@ require(['config'], function() {
                         // console.log(typeof $('.goods-price').text().substring(1));
                         // $.cookie('cookieprice', arrprice, { expires: 10, path: '/' });
                     } else {
-                        let index = $.inArray(sid, arrsid); //sid在数组中的位置
-                        let num = parseInt(arrnum[index]); //sid对应的数量
-                        // let price = arrprice[index];
+                        var index = $.inArray(sid, arrsid); //sid在数组中的位置
+                        var num = parseInt(arrnum[index]); //sid对应的数量
+                        // var price = arrprice[index];
                         arrnum[index] = num + parseInt($('#count').text()); //原来的数量+新添加数量进行赋值
                         // arrprice[index] = price + $('.goods-price').text().substring(1);
                         // arrprice.push('+$('.goods-price').text().substring(1)'); //添加商品的尺寸
@@ -96,7 +92,7 @@ require(['config'], function() {
             }(),
             //+-点击数量变化
             number: ! function() {
-                let goodsnum = 1;
+                var goodsnum = 1;
                 $('.numbercountadd').bind("selectstart", function() { return false; });
                 $('.numbercountminus').bind("selectstart", function() { return false; });
                 $('#count').text(goodsnum);
@@ -122,14 +118,33 @@ require(['config'], function() {
             //点击加入购物车后弹出进入购物车  继续购物
             addtocart: ! function() {
                 $('.addtocart').on('click', function() {
-                    $('.none').css('display', 'none')
-                    $('.show').css('display', 'inline-block')
+                    $('.none').slideUp();
+                    $('.show').css('display', 'inline-block');
                 })
                 $('.show').eq(1).on('click', function() {
                     $('.show').css('display', 'none')
-                    $('.none').css('display', 'block')
+                    $('.none').slideDown();
                 })
             }(),
+            user: ! function() {
+                if ($.cookie('cookieuser')) {
+                    $('.username').css("display", "inline-block");
+                    $('.username').text($.cookie('cookieuser'))
+                    $('.login').css("display", "none");
+                    $('.registry').css("display", "none");
+                    $('.quit').css("display", "inline-block");
+                }
+                $('.quit').on('click', function() {
+                    window.location.reload();
+                    $('.login').css("display", "inline-block");
+                    $('.registry').css("display", "inline-block");
+                    $('.username').css("display", "none");
+                    $('.quit').css("display", "none");
+                    if ($.cookie('cookieuser')) {
+                        $.cookie('cookieuser', null, { expires: -1, path: '/' })
+                    }
+                })
+            }()
         };
     })
 })

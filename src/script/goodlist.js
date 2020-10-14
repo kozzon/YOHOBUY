@@ -1,34 +1,23 @@
 require(['config'], function() {
-    require(['jquery', 'jq_lazyload', 'jq_pagination'], function() {
+    require(['jquery', 'jq_lazyload', 'jq_pagination', 'jq_cookie'], function() {
         return {
             goodlist: ! function() {
-                let array_default = []; //排序前的li数组
-                let array = []; //排序中的数组
+                var array_default = []; //排序前的li数组
+                var array = []; //排序中的数组
                 //冒泡排序，比较相邻的两个数字。
-                let prev = null; //前一个商品价格
-                let next = null; //后一个商品价格
+                var prev = null; //前一个商品价格
+                var next = null; //后一个商品价格
 
                 //1.渲染列表页的数据-默认渲染第一页
-                const list = $('.list ul');
+                var list = $('.list ul');
                 $.ajax({ //获取远程接口的值
                     url: 'http://192.168.11.9/YOHO!BUY/php/listdata.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
-                    let strhtml = '';
+                    var strhtml = '';
                     $.each(data, function(index, value) { //遍历数组和对象
-                        strhtml += `
-                            <li class="pic-${index}">
-                                <a href="detail.html?sid=${value.sid}" target="_blank" class="clear_fix" >
-                                  <img class="lazy" data-original="${value.url}"/>
-                                </a>
-                                <div>
-                                  <a href="">${value.title}</a>
-                                  <p>${value.sub_title}</p>
-                                  <span class="price">￥${value.price}</span>
-                                </div>
-                            </li>                   
-                        `;
+                        strhtml += '<li class="pic-' + index + '"><a href="detail.html?sid=' + value.sid + '" target="_blank" class="clear_fix" ><img class="lazy" data-original="' + value.url + '"/></a><div><a href="">' + value.title + '</a><p>' + value.sub_title + '</p><span class="price">￥' + value.price + '</span></div></li>';
                     });
                     strhtml += '';
                     list.html(strhtml); //追加数据
@@ -50,7 +39,7 @@ require(['config'], function() {
                     prevContent: '上一页', //将图标改成上一页下一页。
                     nextContent: '下一页',
                     callback: function(api) {
-                        console.log(api.getCurrent()); //获取当前的点击的页码。
+                        // console.log(api.getCurrent()); //获取当前的点击的页码。
                         $.ajax({
                             url: 'http://192.168.11.9/YOHO!BUY/php/listdata.php',
                             data: {
@@ -58,22 +47,11 @@ require(['config'], function() {
                             },
                             dataType: 'json'
                         }).done(function(data) {
-                            let strhtml = '';
+                            var strhtml = '';
                             $.each(data, function(index, value) {
-                                strhtml += `
-                            <li class="pic-${index}">
-                                <a href="detail.html?sid=${value.sid}" target="_blank" class="clear_fix" >
-                                  <img class="lazy" data-original="${value.url}"/>
-                                </a>
-                                <div>
-                                  <a href="">${value.title}</a>
-                                  <p>${value.sub_title}</p>
-                                  <span class="price">￥${value.price}</span>
-                                </div>
-                            </li>  
-                            `;
+                                strhtml += '<li class="pic-' + index + '"><a href="detail.html?sid=' + value.sid + '" target="_blank" class="clear_fix" ><img class="lazy" data-original="' + value.url + '"/></a><div><a href="">' + value.title + '</a><p>' + value.sub_title + '</p><span class="price">￥' + value.price + '</span></div></li>';
+
                             });
-                            strhtml += '';
                             list.html(strhtml);
                             $("img.lazy").lazyload({
                                 effect: "fadeIn" //图片显示方式
@@ -89,7 +67,7 @@ require(['config'], function() {
 
                 //3.排序，排序前的数组都已经具有li元素
                 // 升降序
-                let flag = 2;
+                var flag = 2;
                 $('.button').on('click', function() {
                     flag++;
                     //点击切换标识
@@ -98,16 +76,18 @@ require(['config'], function() {
                     })
                     $('.button .high').css({
                         "top": "0px",
-                        "display": "inline-block"
+                        "display": "inline-block",
+                        "color": "#d0021b",
+                        "font-weight": "900"
                     })
                     if (flag % 2 === 0) {
-                        for (let i = 0; i < array.length - 1; i++) {
-                            for (let j = 0; j < array.length - i - 1; j++) {
+                        for (var i = 0; i < array.length - 1; i++) {
+                            for (var j = 0; j < array.length - i - 1; j++) {
                                 prev = parseFloat(array[j].find('.price').html().substring(1)); //取上个价格
                                 next = parseFloat(array[j + 1].find('.price').html().substring(1)); //下一个的价格
                                 //通过价格的判断，改变的是数组li的位置。
                                 if (prev < next) {
-                                    let temp = array[j];
+                                    var temp = array[j];
                                     array[j] = array[j + 1];
                                     array[j + 1] = temp;
                                 }
@@ -124,15 +104,17 @@ require(['config'], function() {
                         })
                         $('.button .low').css({
                             "top": "0px",
-                            "display": "inline-block"
+                            "display": "inline-block",
+                            "color": "#d0021b",
+                            "font-weight": "900"
                         })
-                        for (let i = 0; i < array.length - 1; i++) {
-                            for (let j = 0; j < array.length - i - 1; j++) {
+                        for (var i = 0; i < array.length - 1; i++) {
+                            for (var j = 0; j < array.length - i - 1; j++) {
                                 prev = parseFloat(array[j].find('.price').html().substring(1)); //取上个价格
                                 next = parseFloat(array[j + 1].find('.price').html().substring(1)); //下一个的价格
                                 //通过价格的判断，改变的是数组li的位置。
                                 if (prev > next) {
-                                    let temp = array[j];
+                                    var temp = array[j];
                                     array[j] = array[j + 1];
                                     array[j + 1] = temp;
                                 }
@@ -153,6 +135,25 @@ require(['config'], function() {
                     $('.button .high').attr({
                         style: "bottom:-4px;"
                     })
+                })
+            }(),
+            user: ! function() {
+                if ($.cookie('cookieuser')) {
+                    $('.username').css("display", "inline-block");
+                    $('.username').text($.cookie('cookieuser'))
+                    $('.login').css("display", "none");
+                    $('.registry').css("display", "none");
+                    $('.quit').css("display", "inline-block");
+                }
+                $('.quit').on('click', function() {
+                    window.location.reload();
+                    $('.login').css("display", "inline-block");
+                    $('.registry').css("display", "inline-block");
+                    $('.username').css("display", "none");
+                    $('.quit').css("display", "none");
+                    if ($.cookie('cookieuser')) {
+                        $.cookie('cookieuser', null, { expires: -1, path: '/' })
+                    }
                 })
             }()
         }

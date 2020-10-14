@@ -1,5 +1,5 @@
 require(['config'], function() {
-    require(['jquery', 'sha1'], function() {
+    require(['jquery', 'sha1', 'jq_cookie'], function() {
         return {
             login: ! function() {
                 var login = $('.login');
@@ -19,7 +19,9 @@ require(['config'], function() {
                             username.val('');
                             password.val('');
                         } else {
-                            localStorage.setItem('user', username.val());
+                            if (!$.cookie('cookieuser')) {
+                                $.cookie('cookieuser', username.val(), { expires: 10, path: '/' });
+                            }
                             location.href = 'http://192.168.11.9/YOHO!BUY/src/index1.html';
                         }
                     })
