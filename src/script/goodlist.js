@@ -11,7 +11,7 @@ require(['config'], function() {
                 //1.渲染列表页的数据-默认渲染第一页
                 var list = $('.list ul');
                 $.ajax({ //获取远程接口的值
-                    url: 'http://192.168.11.9/YOHO!BUY/php/listdata.php',
+                    url: 'http://192.168.11.9/YOHOBUY/php/listdata.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
@@ -41,7 +41,7 @@ require(['config'], function() {
                     callback: function(api) {
                         // console.log(api.getCurrent()); //获取当前的点击的页码。
                         $.ajax({
-                            url: 'http://192.168.11.9/YOHO!BUY/php/listdata.php',
+                            url: 'http://192.168.11.9/YOHOBUY/php/listdata.php',
                             data: {
                                 page: api.getCurrent() //传输数据
                             },

@@ -8,7 +8,7 @@ require(['config'], function() {
                 login.on('click', function() {
                     $.ajax({
                         type: 'post',
-                        url: 'http://192.168.11.9/YOHO!BUY/php/login.php',
+                        url: 'http://192.168.11.9/YOHOBUY/php/login.php',
                         data: {
                             user: username.val(),
                             pass: hex_sha1(password.val())
@@ -22,7 +22,7 @@ require(['config'], function() {
                             if (!$.cookie('cookieuser')) {
                                 $.cookie('cookieuser', username.val(), { expires: 10, path: '/' });
                             }
-                            location.href = 'http://192.168.11.9/YOHO!BUY/src/index1.html';
+                            location.href = 'http://192.168.11.9/YOHOBUY/src/index1.html';
                         }
                     })
                 })

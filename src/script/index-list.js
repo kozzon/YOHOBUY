@@ -4,7 +4,7 @@ require(['config'], function() {
             index_list_f: ! function() {
                 var list_f = $('.list-f');
                 $.ajax({ //获取远程接口的值
-                    url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-f.php',
+                    url: 'http://192.168.11.9/YOHOBUY/php/indexlist-f.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
@@ -22,7 +22,7 @@ require(['config'], function() {
             index_list_s: ! function() {
                 var list_s = $('.list-s');
                 $.ajax({ //获取远程接口的值
-                    url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-s.php',
+                    url: 'http://192.168.11.9/YOHOBUY/php/indexlist-s.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
@@ -41,7 +41,7 @@ require(['config'], function() {
             index_list_t: ! function() {
                 var list_t = $('.list-t');
                 $.ajax({ //获取远程接口的值
-                    url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-t.php',
+                    url: 'http://192.168.11.9/YOHOBUY/php/indexlist-t.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);
@@ -60,7 +60,7 @@ require(['config'], function() {
             index_list_fo: ! function() {
                 var list_fo = $('.list-fo');
                 $.ajax({ //获取远程接口的值
-                    url: 'http://192.168.11.9/YOHO!BUY/php/indexlist-fo.php',
+                    url: 'http://192.168.11.9/YOHOBUY/php/indexlist-fo.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // console.log(data);

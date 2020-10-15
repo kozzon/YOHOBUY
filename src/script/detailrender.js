@@ -7,7 +7,7 @@ require(['config'], function() {
                     sid = 1;
                 }
                 $.ajax({
-                    url: 'http://192.168.11.9/YOHO!BUY/php/getsid.php',
+                    url: 'http://192.168.11.9/YOHOBUY/php/getsid.php',
                     data: {
                         datasid: sid
                     },

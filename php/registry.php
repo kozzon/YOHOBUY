@@ -26,5 +26,5 @@ if(isset($_POST['submit'])){//是否点击了提交按钮
         $phone = $_POST['phone'];
         $conn->query("insert registry values(default,'$user','$pass','$email',NOW(),'$phone')");
         //跳转到前端的登录页面
-        header('location:http://192.168.11.9/YOHO!BUY/src/login.html');
+        header('location:http://192.168.11.9/YOHOBUY/src/login.html');
 }
