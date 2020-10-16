@@ -12,7 +12,7 @@ require(['config'], function() {
                 //封装函数实现渲染。
                 function rendercart(sid, num) { //sid:渲染的商品编号    num:渲染的商品的数量。
                     $.ajax({
-                        url: 'http://192.168.11.9/YOHOBUY/php/piclist.php',
+                        url: 'http://10.31.163.210/YOHOBUY/php/piclist.php',
                         dataType: 'json'
                     }).done(function(data) {
                         $.each(data, function(index, value) {

@@ -42,7 +42,7 @@ require(['config'], function() {
                 })
                 username.on('blur', function() {
                     $.ajax({
-                        url: 'http://192.168.11.9/YOHOBUY/php/registry.php',
+                        url: 'http://10.31.163.210/YOHOBUY/php/registry.php',
                         type: 'post',
                         data: {
                             username: username.val()
